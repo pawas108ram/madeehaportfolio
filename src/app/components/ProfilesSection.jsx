@@ -35,14 +35,15 @@ function ProfilesSection() {
 
   return (
     <div className="z-20 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between ">
         {profiles.map((profile, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0 z-20"
             >
-              <Link href={profile.link}>
+              <Link href={profile.link} >
+                
                 <Image
                   src={profile.icon}
                   alt="icon"
@@ -51,6 +52,7 @@ function ProfilesSection() {
                   className="flex justify-center items-center"
                 />
                 <p className="text-[#ADB7BE] text-base justify-center items-center flex">{profile.name}</p>
+                
               </Link>
             </div>
           );
