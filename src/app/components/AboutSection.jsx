@@ -61,11 +61,11 @@ function AboutSection() {
         />
         <div>
           <h2 className="text-4xl font-bold text-white mb-4 mt-2">About Me</h2>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p className="text-base md:text-lg">
             I'm a passionate full-stack web developer who loves building
             dynamic, responsive and user-friendly web apps. My specialties
-            include the MERN stack (JavaScript, React, Node.js, Express,
-            MongoDB), SQL, and Git. As a team player, I love working with others
+            include the MERN stack, SQL, and Git. As a team player, I love working with others
             to create great web experiences. Beyond web development, I'm also a
             budding blockchain enthusiast, equipped with strong problem-solving
             skills and a knack for tackling challenges head-on.
