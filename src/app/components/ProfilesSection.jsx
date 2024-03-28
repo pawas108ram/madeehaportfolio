@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
 
 const profiles = [
   {
@@ -33,12 +32,6 @@ const profiles = [
 ];
 
 function ProfilesSection() {
-    const router = useRouter();
-
-const handleClick = (e, link) => {
-  e.preventDefault();
-  router.push(link);
-};
 
   return (
     <div className="z-20 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -49,7 +42,7 @@ const handleClick = (e, link) => {
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
-              <a href={profile.link} onClick={(e) => console.log(profile.link)}>
+              <Link href={profile.link}>
                 <Image
                   src={profile.icon}
                   alt="icon"
@@ -58,7 +51,7 @@ const handleClick = (e, link) => {
                   className="flex justify-center items-center"
                 />
                 <p className="text-[#ADB7BE] text-base justify-center items-center flex">{profile.name}</p>
-              </a>
+              </Link>
             </div>
           );
         })}
